@@ -131,16 +131,16 @@
             <h1 class="sub-title">My Work</h1>
             <div class="work-list">
                 <div class="work">
-                    <img src="images/work-1.png" >
+                    <img src="work/parfume-ad-card/images/image-product-desktop1.jpg">
                     <div class="layer">
-                        <h3>Social Media App</h3>
-                        <p>The app connect you to the talented people around the word.Download it from play store</p>
-                        <a href="#"><i class="fa-solid fa-up-right-from-square"></i></a>
+                        <h3>Parfume Ad card</h3>
+                        <p>Gabrielle Essence Eau De Parfume</p>
+                        <a href="work/parfume-ad-card/index.html"><i class="fa-solid fa-up-right-from-square"></i></a>
                     </div>
                 </div>
 
                 <div class="work">
-                    <img src="images/work-2.png" >
+                    <img src="images/work-2.png">
                     <div class="layer">
                         <h3>Social Media App2</h3>
                         <p>The app connect you to the talented people around the word.Download it from play store</p>
@@ -149,7 +149,7 @@
                 </div>
 
                 <div class="work">
-                    <img src="images/work-3.png" >
+                    <img src="images/work-3.png">
                     <div class="layer">
                         <h3>Social Media App3</h3>
                         <p>The app connect you to the talented people around the word.Download it from play store</p>
@@ -167,25 +167,32 @@
         <div class="row">
             <div class="contact-left">
                 <h1 class="sub-title">Contact Me</h1>
-                <p><i class="fa-solid fa-envelope"></i>vishalbkahathara5@email.com</p>
-                <p><i class="fa-solid fa-square-phone"></i>+91 7567637462</p>
+               
+                    <p class="email"> <i class="fa-solid fa-envelope"></i>vishalbkahathara5@email.com</p>
+                  
+              
+                    <p class="mno"><i class="fa-solid fa-square-phone"></i>+91 7567637462</p>
                 <div class="social-icons">
-                    
-                   <span class="hide"><a target="_blank" href="https://www.facebook.com/vk08.17/"><i class="fa-brands  fa-square-facebook"></i></a></span> 
-                    <a target="_blank" href="https://twitter.com/kagathara_visu"><i class="fa-brands fa-square-twitter"></i></a>
-                    <span class="hide"><a target="_blank" href="https://www.instagram.com/vishal_kagathara/"><i class="fa-brands  fa-square-instagram"></i></a></span>
-                    <a target="_blank" href="https://www.linkedin.com/in/vishal-kagathara-b49769103/"><i class="fa-brands fa-linkedin"></i></a>
+
+                    <span class="hide"><a target="_blank" href="https://www.facebook.com/vk08.17/"><i
+                                class="fa-brands  fa-square-facebook"></i></a></span>
+                    <a target="_blank" href="https://twitter.com/kagathara_visu"><i
+                            class="fa-brands fa-square-twitter"></i></a>
+                    <span class="hide"><a target="_blank" href="https://www.instagram.com/vishal_kagathara/"><i
+                                class="fa-brands  fa-square-instagram"></i></a></span>
+                    <a target="_blank" href="https://www.linkedin.com/in/vishal-kagathara-b49769103/"><i
+                            class="fa-brands fa-linkedin"></i></a>
                 </div>
-                <span  class="hide">
-                <a href="cv/my-cv.pdf" download class="btn btn2">Download CV</a></span>
+                <span class="hide">
+                    <a href="cv/my-cv.pdf" download class="btn btn2">Download CV</a></span>
             </div>
 
             <div class="contact-right">
                 <form name="submit-to-google-sheet">
                     <input type="text" name="Name" placeholder="Your Name" required>
                     <input type="email" name="Email" placeholder="Your Email" required>
-                    <textarea name="Message"rows="6" placeholder="Your Message"></textarea>
-                    <button class="btn btn2" type="submit">Submit</button>
+                    <textarea name="Message" rows="6" placeholder="Your Message" style="resize: none;"></textarea>
+                    <button class="btn btn2 flex-center" type="submit">Submit</button>
                 </form>
                 <span id="msg"></span>
 
@@ -193,7 +200,7 @@
         </div>
     </div>
     <div class="copyright">
-        <p>copyright 	&copy; Vishal.</p>
+        <p>copyright &copy; Vishal.</p>
     </div>
 </div>
 
@@ -214,14 +221,14 @@
 </script>
 
 <script>
-    var side_menu=document.getElementById("sidemenu");
+    var side_menu = document.getElementById("sidemenu");
 
-    function openmenu(){
-        side_menu.style.right="0";
+    function openmenu() {
+        side_menu.style.right = "0";
     }
 
-    function closemenu(){
-        side_menu.style.right="-200px";
+    function closemenu() {
+        side_menu.style.right = "-200px";
     }
 
 </script>
@@ -229,20 +236,20 @@
     const scriptURL = 'https://script.google.com/macros/s/AKfycbxQF9oWJAUeaQ1tCMH9UriZc3QsX5voDQ-WsnXGsEIKXSQV4lpcsuxv7k0VJ8B2_m4H/exec'
     const form = document.forms['submit-to-google-sheet']
 
-    const msg=document.getElementById('msg')
-  
+    const msg = document.getElementById('msg')
+
     form.addEventListener('submit', e => {
-      e.preventDefault()
-      fetch(scriptURL, { method: 'POST', body: new FormData(form)})
-        .then(response => {
-            msg.innerHTML = "Message sent sucessfully"
-            setTimeout(function(){
-                msg.innerHTML = ""
-            },2500)
-            form.reset()
-        })
-        .catch(error => console.error('Error!', error.message))
+        e.preventDefault()
+        fetch(scriptURL, { method: 'POST', body: new FormData(form) })
+            .then(response => {
+                msg.innerHTML = "Message sent sucessfully"
+                setTimeout(function () {
+                    msg.innerHTML = ""
+                }, 2500)
+                form.reset()
+            })
+            .catch(error => console.error('Error!', error.message))
     })
-  </script>
+</script>
 
 </html>
