@@ -15,8 +15,18 @@
     --fw-regular: 500;
     --fw-bold: 700;
 }
-
-
+.btn{
+  background: transparent;
+  color: #fff;
+  border: #fff;
+}
+/* 
+.border{
+  border: 2px solid red;
+}
+.border1{
+  border: 2px solid green;
+} */
 /*
   1. Use a more-intuitive box-sizing model.
 */
