@@ -90,7 +90,7 @@ nav ul li a::after {
 }
 
 nav ul li a:hover::after {
-    width: 100%;
+    width: 100%
 }
 
 .header-text {
@@ -129,6 +129,16 @@ nav ul li a:hover::after {
 
 .about-col-2 {
     flex-basis: 60%;
+}
+
+/* .line-height{
+ ;
+} */
+/* .text-align-top{
+    
+} */
+.m1{
+    margin-left: -12px;
 }
 
 .sub-title {
@@ -344,11 +354,19 @@ nav ul li a:hover::after {
     margin-top: 30px;
 }
 .email{
+    display: flex;
+    
+}
+.email-logo:hover{
     cursor: pointer;
+color: var(--clr-base-300);
+}
+.mno{
     display: flex;
 }
-.fa-envelope:hover{
-color: var(--clr-base-300);
+.mno-logo:hover{
+    cursor: pointer;
+    color: var(--clr-base-300);
 }
 
 .social-icons a {
@@ -493,9 +511,9 @@ nav .fas {
     .contact-right {
         flex-basis: 100%;
     }
-    .mail:hover .mail-hover{
+    /* .mail:hover .mail-hover{
         display: none;
-    }
+    } */
 
 
     .copyright {
@@ -504,7 +522,7 @@ nav .fas {
 }
 
 #msg {
-    color: #61b752;
+    color: var(--clr-base-300);
     margin-top: -40px;
     display: block;
 }
@@ -512,4 +530,9 @@ nav .fas {
 /* hide */
 .hide {
     display: none;
+}
+
+.border{
+    border: 1px solid transparent;
+    
 }
