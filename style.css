@@ -1,13 +1,25 @@
 :root {
     --ff-logo-400: 'Roboto Condensed', sans-serif;
     /* --fw-logo-700: 500; */
+
+    
     --clr-body-900: #080808;
     --clr-body-700: #262626;
     --clr-text-100: #ffffff;
     --clr-base-400: #6A67CE;
     --clr-base-300: #9e8bc6;
+
+
     /* --clr-base-200: #9DF3C4;
     --clr-base-100: #D7FBE8; */
+
+
+
+    /* --clr-body-900: #D3DEDC;
+    --clr-body-700: #92A9BD;
+    --clr-text-100: #0F0E0E;
+    --clr-base-400: #7C99AC;
+    --clr-base-300: #CCD1E4; */
 }
 /* *{
     background-color:  ;
@@ -131,12 +143,6 @@ nav ul li a:hover::after {
     flex-basis: 60%;
 }
 
-/* .line-height{
- ;
-} */
-/* .text-align-top{
-    
-} */
 .m1{
     margin-left: -12px;
 }
@@ -171,9 +177,6 @@ nav ul li a:hover::after {
     transition: 500ms ease-in-out;
 }
 
-/* .tab-links:hover::after {
-    width: 100%;
-} */
 .tab-links.active-link::after {
     width: 50%;
 }
@@ -195,6 +198,39 @@ nav ul li a:hover::after {
 .tab-contents.active-tab {
     display: block;
 }
+/*about > skill card css */
+
+
+.skill {
+  display: flex;
+  align-items: center;
+  margin-bottom: 20px;
+}
+
+.skill-name {
+  width: 80px;
+}
+
+.skill-level {
+  width: 130px;
+  height: 10px;
+  background-color: var(--clr-body-900);
+  border-radius: 10px;
+  overflow: hidden;
+  margin-left: 20px;
+}
+
+.skill-percent {
+  background-color: var(--clr-base-300);
+  height: 100%;
+}
+
+.skill-percent-number {
+  margin-left: 20px;
+  font-size: 16px;
+}
+
+/* /end */
 
 /* services */
 
@@ -241,7 +277,6 @@ nav ul li a:hover::after {
 .services-list div:hover {
     background: var(--clr-base-400);
     transform: translateY(-10px);
-    /* transition: 300ms; */
 }
 
 /* portfolio */
@@ -384,7 +419,6 @@ color: var(--clr-base-300);
 }
 
 .btn.btn2 {
-    /* display: inline-block; */
     background: var(--clr-base-400);
     display: flex;
     justify-content: center;
@@ -392,8 +426,6 @@ color: var(--clr-base-300);
 }
 .btn.btn2:hover{
     background: var(--clr-base-300);
-    /* background: var(--clr-body-900); */
-    /* color: var(--clr-body-700); */
 }
 
 @media (min-width: 50em) {
@@ -427,6 +459,62 @@ form .btn2 {
     cursor: pointer;
 }
 
+
+/* animation */
+
+.btn-new {
+    display: block;
+    position: relative;
+    overflow: hidden;
+    border: 2px solid var(--clr-base-400);
+    background-color: var(--clr-body-700);
+    transition: color .5s;
+    z-index: 1;
+    font-size: 17px;
+    border-radius: 6px;
+    font-weight: 700;
+    color: var(--clr-base-300);
+   }
+
+   .btn-new{
+    padding: 14px 60px;
+    cursor: pointer;
+    margin:15px 0 50px ;
+    width: fit-content;
+    text-decoration: none;
+   }
+   
+   .btn-new:before {
+    content: "";
+    position: absolute;
+    z-index: -1;
+    background: var(--clr-base-400);
+    height: 230px;
+    width: 250px;
+    border-radius: 50%;
+   }
+
+   .btn-new:hover {
+    color: #fff;
+   }
+   
+   .btn-new:before {
+    top: 100%;
+    left: 100%;
+    transition: all .7s;
+   }
+   
+   .btn-new:hover:before {
+    top: -50px;
+    left: -30px;
+   }
+   
+   .btn-new:active:before {
+    transition: background 0s;
+   }
+
+/* /end */
+
 /* copyright */
 .copyright {
     width: 100%;
@@ -442,7 +530,9 @@ nav .fas {
     display: none;
 }
 
-@media only screen and (max-width: 600px) {
+
+
+@media only screen and (max-width: 805px) {
     #header {
         background-image: url(images/phone-background1.jpg);
     }
@@ -458,7 +548,8 @@ nav .fas {
 
     nav .fas {
         display: block;
-        font-size: 25px
+        font-size: 25px;
+        cursor: pointer;
     }
 
     nav ul {
@@ -483,6 +574,11 @@ nav .fas {
         top: 25px;
         left: 25px;
         cursor: pointer;
+    }
+
+    nav ul li a::after{
+        background: var(--clr-text-100);
+
     }
 
     .sub-title {
@@ -511,14 +607,13 @@ nav .fas {
     .contact-right {
         flex-basis: 100%;
     }
-    /* .mail:hover .mail-hover{
-        display: none;
-    } */
-
 
     .copyright {
         font-size: 14px;
     }
+    form div{
+        display: flex;
+        justify-content: center;}
 }
 
 #msg {
